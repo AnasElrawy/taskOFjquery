@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.js"></script>
+    <style>
+        .parant {
+            /* display: flex; */
+            height: 1000px;
+            width: 50px;
+            background-color: coral;
+        }
+
+        .chiled {
+            height: 60px;
+            background-color: rgb(214, 77, 27);
+        }
+
+        .slid {
+            background-color: rgb(253, 93, 35);
+        }
+
+
+        .hover {
+            width: 300px;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="parant">
+        <div class="p2" style="display: none;">
+
+            <div class="chiled" id="ch1">item1
+
+            </div>
+            <div id="slid1" class="slid" style="display:none ; height: 50px;">
+                111111
+            </div>
+        </div>
+
+        <div class="p2" style="display: none;">
+            <div class="chiled" id="ch2" >item2</div>
+            <div id="slid2" class="slid" style="display:none ; height: 50px;">
+                22222
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        $(".parant").hover(function () {
+            $(".parant").toggleClass("hover")
+            $(".p2").toggle();
+
+            console.log("t")
+
+        })
+
+
+        $("#ch1").click(function () {
+            $("#slid1").slideToggle(1000);
+        });
+
+        $("#ch2").click(function () {
+            $("#slid2").slideToggle(1000);
+        });
+
+
+
+
+
+    </script>
+</body>
+
+</html>
