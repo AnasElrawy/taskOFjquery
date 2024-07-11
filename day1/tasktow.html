@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        ul {
+            list-style-type: none;
+            display: flex;
+            margin-bottom: 0;
+
+        }
+
+        li {
+            display: flex;
+            width: 100px;
+            height: 30px;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .activ {
+            background-color: rgb(188, 186, 186);
+        }
+
+
+
+        div {
+            padding: 20px;
+            margin-left: 40px;
+            height: 100px;
+        }
+
+        div {
+            background-color: rgb(188, 186, 186);
+        }
+    </style>
+
+    <script src="jquery-3.7.1.js"></script>
+
+</head>
+
+<body>
+
+    <ul>
+        <li class="activ" onclick="disp(event)" id="T1">TAP 1</li>
+        <li onclick="disp(event)" id="T2">TAP 2</li>
+        <li onclick="disp(event)" id="T3">TAP 3</li>
+        <li onclick="disp(event)" id="T4">TAP 4</li>
+    </ul>
+
+    <div id="tap1" style="display: block;">taap 11111</div>
+    <div id="tap2" style="display: none;">taap 22222</div>
+    <div id="tap3" style="display: none;">taap 33333</div>
+    <div id="tap4" style="display: none;">taap 44444</div>
+
+
+
+
+    <script>
+
+        function disp(e) {
+            switch (e.target.id) {
+                case "T1":
+                    $("#tap1").css("display", "block");
+                    $("#tap2").css("display", "none");
+                    $("#tap3").css("display", "none");
+                    $("#tap4").css("display", "none");
+                    
+                    $("#T1").addClass("activ");
+                    $("#T2").removeClass("activ");
+                    $("#T3").removeClass("activ");
+                    $("#T4").removeClass("activ");
+
+
+                    break;
+                case "T2":
+                    $("#tap2").css("display", "block");
+                    $("#tap1").css("display", "none");
+                    $("#tap3").css("display", "none");
+                    $("#tap4").css("display", "none");
+
+                    $("#T2").addClass("activ");
+                    $("#T1").removeClass("activ");
+                    $("#T3").removeClass("activ");
+                    $("#T4").removeClass("activ");
+
+                     break;
+                case "T3":
+                    $("#tap3").css("display", "block");
+                    $("#tap1").css("display", "none");
+                    $("#tap2").css("display", "none");
+                    $("#tap4").css("display", "none");
+
+                    $("#T3").addClass("activ");
+                    $("#T2").removeClass("activ");
+                    $("#T1").removeClass("activ");
+                    $("#T4").removeClass("activ");
+
+
+                     break;
+                case "T4":
+                    $("#tap4").css("display", "block");
+                    $("#tap1").css("display", "none");
+                    $("#tap2").css("display", "none");
+                    $("#tap3").css("display", "none");
+
+                    $("#T4").addClass("activ");
+                    $("#T2").removeClass("activ");
+                    $("#T3").removeClass("activ");
+                    $("#T1").removeClass("activ");
+                     break;
+            }
+        }
+    </script>
+</body>
+
+</html>
